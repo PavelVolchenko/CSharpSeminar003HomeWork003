@@ -2,8 +2,7 @@
     пятизначное число и проверяет, является ли оно палиндромом.
     14212 -> нет
     12821 -> да
-    23432 -> да                                              */
-
+    23432 -> да                                              */    
 int backOfNumber(int number)
 {
     int backOfNumber = number;
@@ -27,13 +26,9 @@ int reverseBackOfNumber(int backOfNumber)
     return result;
 }
 
-int number = 14241;
+int number = 14252;
 int toReverseNumber = backOfNumber(number);
-
 Console.WriteLine("Входное число: " + number);
-Console.WriteLine("Передняя часть числа: " + frontOfNumber(number));
-Console.WriteLine("Задняя часть числа: " + backOfNumber(number));
-Console.WriteLine("Перевернутая часть заднего числа: " + reverseBackOfNumber(toReverseNumber));
 
 if(reverseBackOfNumber(toReverseNumber) == frontOfNumber(number)) 
 {

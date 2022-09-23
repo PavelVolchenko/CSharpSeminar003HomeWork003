@@ -14,7 +14,7 @@ int getNumberFromUser(string userInformation)
     return result;
 }
 
-int[] tableQuarterNumber(int number)
+int[] tableOfCubesNumber(int number)
 {
     int[] result = new int [number];
     for(int i = 1; i <= number; i++)
@@ -25,7 +25,7 @@ int[] tableQuarterNumber(int number)
 }
 
 int number = getNumberFromUser("Введите целое число N > 1: ");
-int[] table = tableQuarterNumber(number);
+int[] table = tableOfCubesNumber(number);
 
 for (int i = 0; i < table.Length; i++)
 {
