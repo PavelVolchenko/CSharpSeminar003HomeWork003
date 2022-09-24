@@ -4,11 +4,23 @@
     12821 -> да
     23432 -> да                                              */
 
-int reversInputNumber(int number)
+// int reversInputNumber(int number)
+// {
+//     int reverseNumber = 0;
+//     reverseNumber = ((number % 10) * 10000) + (((number / 10) % 10) * 1000) + 
+//     (((number / 100) % 10) * 100) + (((number / 1000) % 10) * 10) + (number / 10000);    
+//     return reverseNumber;
+// }
+
+int reversInputNumber(int number)  // Улучшенная версия функции разворота числа
 {
     int reverseNumber = 0;
-    reverseNumber = ((number % 10) * 10000) + (((number / 10) % 10) * 1000) + 
-    (((number / 100) % 10) * 100) + (((number / 1000) % 10) * 10) + (number / 10000);    
+    while(number > 0)
+    {
+        reverseNumber *= 10;
+        reverseNumber += number % 10;
+        number /= 10;
+    }  
     return reverseNumber;
 }
 
